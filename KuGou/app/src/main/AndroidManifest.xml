@@ -21,8 +21,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SongListActivity" >
-        </activity>
+        <activity android:name=".SongListActivity" ></activity>
+        <activity android:name=".LyricActivity" ></activity>
 
         <service android:name="service.MediaPlayService"/>
         <service android:name="service.ForegroundService"/>

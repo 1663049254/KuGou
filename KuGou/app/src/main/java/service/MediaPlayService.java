@@ -9,6 +9,7 @@ import android.support.annotation.Nullable;
 
 import com.example.kugou1.MainActivity;
 import com.example.kugou1.SongListActivity;
+import com.example.kugou1.SongListActivityChild;
 
 import java.io.File;
 import java.util.concurrent.ExecutorService;
@@ -103,7 +104,7 @@ public class MediaPlayService extends Service {
                     if(MainActivity.getCheckState())
                         mMp.start();
                     else {
-                        SongListActivity.setPlayButton(false);
+                        SongListActivityChild.setPlayButton(false);
                         ForegroundService.setPlayButton(false);
                     }
                 }

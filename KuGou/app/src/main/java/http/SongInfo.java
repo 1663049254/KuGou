@@ -15,6 +15,7 @@ public class SongInfo implements Parcelable {
     public String key;
     public String url;
     public String album_url;
+    public String author_img;
     public int album_audio_id;
     public int filesize;
 
@@ -35,9 +36,9 @@ public class SongInfo implements Parcelable {
         dest.writeString(key);
         dest.writeString(url);
         dest.writeString(album_url);
+        dest.writeString(author_img);
         dest.writeInt(album_audio_id);
         dest.writeInt(filesize);
-
     }
     public static final Creator<SongInfo> CREATOR=new Creator<SongInfo>(){
 
@@ -62,12 +63,9 @@ public class SongInfo implements Parcelable {
         key=in.readString();
         url=in.readString();
         album_url=in.readString();
+        author_img=in.readString();
         album_audio_id=in.readInt();
         filesize=in.readInt();
-
-
     }
-    public SongInfo(){
-
-    }
+    public SongInfo(){}
 }

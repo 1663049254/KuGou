@@ -13,6 +13,7 @@ import android.support.annotation.Nullable;
 import android.util.Log;
 import android.widget.RemoteViews;
 
+import com.example.kugou1.LyricActivity;
 import com.example.kugou1.MainActivity;
 import com.example.kugou1.R;
 import com.example.kugou1.SongListActivity;
@@ -46,7 +47,7 @@ public class ForegroundService extends Service {
         notificationManager=(NotificationManager) getSystemService(NOTIFICATION_SERVICE);
         mBuilder=new Notification.Builder(this);
         remoteViews=new RemoteViews(getPackageName(),R.layout.notification_layout);
-        Intent intent = new Intent(this, SongListActivity.class);
+        Intent intent = new Intent(this, LyricActivity.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
         PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, intent,PendingIntent.FLAG_CANCEL_CURRENT);
         mBuilder.setContentIntent(pendingIntent);

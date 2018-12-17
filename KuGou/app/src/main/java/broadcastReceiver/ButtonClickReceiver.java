@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.widget.Toast;
 
 import com.example.kugou1.SongListActivity;
+import com.example.kugou1.SongListActivityChild;
 
 import service.ForegroundService;
 import service.MediaPlayService;
@@ -17,12 +18,12 @@ public class ButtonClickReceiver extends BroadcastReceiver {
         if(MediaPlayService.isPlaying()) {
             ForegroundService.setPlayButton(false);
             MediaPlayService.pause();
-            SongListActivity.setPlayButton(false);
+            SongListActivityChild.setPlayButton(false);
         }
         else{
             ForegroundService.setPlayButton(true);
             MediaPlayService.start();
-            SongListActivity.setPlayButton(true);
+            SongListActivityChild.setPlayButton(true);
         }
 
     }
